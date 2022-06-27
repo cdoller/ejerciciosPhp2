@@ -64,6 +64,17 @@
 
             echo "<br><a href='index.php'>Volver</a>";
             break;
+        case 7:
+            $comentario = $_GET['comentario'];
+            $caracteres = strlen($comentario);
+            if($caracteres<150){
+                echo "Comentario cargado correctamente, muchas gracias.";
+            }
+            else{
+                echo "Error! La longitud máxima de los comentarios es de 150, tu comentario en cambio tiene $caracteres caracteres.";
+            }
+            echo "<br><a href='index.php'>Volver</a>";
+            break;
         default:
             echo "El codigo enviado es incorrecto";
             echo "<br><a href='index.php'>Volver</a>";

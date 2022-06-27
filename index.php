@@ -5,42 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pasar variables por URL en PHP</title>
+    <link rel="icon" href="favicon.ico" sizes="16x16" type="image/png">
     <style>
-        section{
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            flex-wrap: wrap;
-            width: 100%;
-            height: 80vh;
-            background-color: rgb(105, 105, 105);
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #titulo{
+            height: 40px;
             box-sizing: border-box;
         }
-        input{
-            height: 50px;
-            width: 120px;
+        section{
+            width: 100%;
+            height: 85vh;
+            background-color: #455A64;
+            box-sizing: border-box;
             display: flex;
             justify-content: center;
             align-items: center;
+            color: #FFFFFF;
+        }
+        .ejercicios{
+            width: 90%;
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        .ejercicios li{
+            margin: 0 10px 20px 10px;
         }
         form{
-            width: 30%;
+            display: flex;
+            flex-direction: column;
         }
-        ol{
-            width: 500px;
+        input{
+            width: 150px;
+            height: 25px;
+            margin: 5px 0 5px 0;
         }
-        li{
-            width: 400px;
+        button{
+            width: 70px;
+            height: 35px;
+            background-color: black;
+            color: white;
         }
     </style>
 </head>
 <body>
-    <h1>Variables por URL</h1>
+    <h1 id="titulo">Variables por URL</h1>
     <section>
-        <ol>
+        <ol class="ejercicios">
             <li>
                 <ol type="A">
-                    <li>
+                    <li class="submenu">
                         <form action="ejercicios.php" method="get">
                             <label for="numero">Numero a enviar:</label>
                             <input type="number" placeholder="Ingrese un numero" name="numero">
@@ -48,7 +66,7 @@
                             <button>ENVIAR</button>
                         </form>
                     </li>
-                    <li>
+                    <li class="submenu">
                         <?php numerosImparesHasta20(); ?>
                     </li>
                 </ol>
@@ -90,8 +108,16 @@
                             <button>ENVIAR</button>
                 </form>
             </li>
+            <li>
+                <h4>Problema Blog</h4>
+                <form action="ejercicios.php" method="get">
+                            <label for="comentario">Ingrese su comentario:</label>
+                            <textarea cols="30" rows="5" name="comentario"></textarea>
+                            <input name="ID" type="hidden" value="7">
+                            <button>ENVIAR</button>
+                </form>
+            </li>
         </ol>
-    
     </section>
 </body>
 </html>
