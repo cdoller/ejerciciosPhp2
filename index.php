@@ -140,12 +140,12 @@
     }
 
     function diaSemana(){
-        $diaIngles = date ('N');
+        $diaIngles = date ('D');
         switch ($diaIngles){
-            case 1:
+            case "Mon":
                 echo "LUNES";
                 break;
-            case 2:
+            case "Tue":
                 echo "MARTES";
                 break;
             case 3:
