@@ -140,12 +140,15 @@
     }
 
     function diaSemana(){
-        $diaIngles = date ('D');
-        switch ($diaIngles){
-            case "Mon":
+        date_default_timezone_set("America/Argentina/Cordoba");
+        $diaCodigo = getdate();
+        echo $diaCodigo["wday"] . "<br>";
+        echo date_default_timezone_get() . "<br>";
+        switch ($diaCodigo["wday"]){
+            case 1:
                 echo "LUNES";
                 break;
-            case "Tue":
+            case 2:
                 echo "MARTES";
                 break;
             case 3:
@@ -160,7 +163,7 @@
             case 6:
                 echo "SABADO";
                 break;
-            case 7:
+            case 0:
                 echo "DOMINGO";
                 break;
         }
