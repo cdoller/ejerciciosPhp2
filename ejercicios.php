@@ -13,7 +13,7 @@
 
             }
             else{
-                echo "tu vieja";
+                echo "algo raro";
             }
             echo "<br><a href='index.php'>Volver</a>";
             break;
@@ -25,7 +25,7 @@
                 echo "<br><a href='index.php'>Volver</a>";
             }
             else{
-                echo "tuvieja";
+                echo "algo raro";
             }
             break;
         case 5:

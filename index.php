@@ -59,11 +59,11 @@
             <li>
                 <ol type="A">
                     <li class="submenu">
-                        <form action="ejercicios.php" method="get">
+                        <form action="ejercicios.php" method="GET">
                             <label for="numero">Numero a enviar:</label>
-                            <input type="number" placeholder="Ingrese un numero" name="numero">
+                            <input id="numero" type="number" placeholder="Ingrese un numero" name="numero">
                             <input name="ID" type="hidden" value="1">
-                            <button>ENVIAR</button>
+                            <button type="submit">ENVIAR</button>
                         </form>
                     </li>
                     <li class="submenu">
@@ -72,7 +72,7 @@
                 </ol>
             </li>
             <li>
-                <form action="ejercicios.php" method="get">
+                <form action="ejercicios.php" method="GET">
                     <label for="numero1">Primer numero de la suma:</label>
                     <input type="number" placeholder="Numero1" name="numero1">
 
@@ -142,8 +142,8 @@
     function diaSemana(){
         date_default_timezone_set("America/Argentina/Cordoba");
         $diaCodigo = getdate();
-        echo $diaCodigo["wday"] . "<br>";
-        echo date_default_timezone_get() . "<br>";
+        //echo $diaCodigo["wday"] . "<br>";
+        //echo date_default_timezone_get() . "<br>";
         switch ($diaCodigo["wday"]){
             case 1:
                 echo "LUNES";
